@@ -6,17 +6,22 @@ class Home extends StatefulWidget {
         return new HomeState();
     }
 }
+
 class HomeState extends State<Home> {
     @override
     Widget build(BuildContext context) {
         return new Scaffold(
             appBar: new AppBar(title: Text('home page'),),
-            body: new Center(
-                child: RaisedButton(
-                    child: Text('To Profile Page'),
-                    onPressed: () {
-                        Navigator.pushNamed(context, '/profile');
-                    }),
+            body: Row(
+                children: <Widget>[
+                    Image(
+                        image: AssetImage('assets/images/common/default_avatar.png'),
+                    ),
+                    Image(
+                        image: AssetImage('assets/images/home/icon_like_discover.png'),
+                    )
+                
+                ],
             ),
         );
     }

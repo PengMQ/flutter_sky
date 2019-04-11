@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sky/services/localization/lanLocalizations.dart';
 
 class Home extends StatefulWidget {
     @override
@@ -11,7 +12,7 @@ class HomeState extends State<Home> {
     @override
     Widget build(BuildContext context) {
         return new Scaffold(
-            appBar: new AppBar(title: Text('home page'),),
+            appBar: new AppBar(title: Text(LanLocalizations.of(context).localizedValue['home']['pageTitle']),),
             body: Row(
                 children: <Widget>[
                     Image(
